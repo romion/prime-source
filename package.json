@@ -1,0 +1,31 @@
+{
+  "name": "simple-frontend-starter",
+  "version": "1.0.0",
+  "description": "My personal starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romion/simple-frontend-starter.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Roman Sazhnev",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
+}
