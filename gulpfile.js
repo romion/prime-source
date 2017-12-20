@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   pug = require('gulp-pug'),
   sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps');
+  sourcemaps = require('gulp-sourcemaps'),
+  smartgrid = require('smart-grid');
 
 gulp.task('default', function() {
   console.log("Hello");
@@ -104,3 +105,40 @@ gulp.task('img', function() {
   return gulp.src('./src/img/**/*')
   .pipe(gulp.dest('./dist/img'));
 });
+
+var settings = {
+    outputStyle: 'sass', /* less || scss || sass || styl */
+    columns: 12, /* number of grid columns */
+    offset: '0px', /* gutter width px || % */
+    mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
+    container: {
+        maxWidth: '1200px', /* max-width оn very large screen */
+        fields: '30px' /* side fields */
+    },
+    breakPoints: {
+        lg: {
+            width: '1100px', /* -> @media (max-width: 1100px) */
+        },
+        md: {
+            width: '960px'
+        },
+        sm: {
+            width: '780px',
+            fields: '15px' /* set fields only if you want to change container.fields */
+        },
+        xs: {
+            width: '560px'
+        }
+      /*
+       We can create any quantity of break points.
+
+       some_name: {
+       width: 'Npx',
+       fields: 'N(px|%|rem)',
+       offset: 'N(px|%|rem)'
+       }
+       */
+    }
+};
+
+smartgrid('./src/sass/includes', settings);

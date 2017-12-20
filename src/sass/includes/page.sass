@@ -1,24 +1,405 @@
 html
-  font-size: 18px
+  font-size: 40px
 
 body
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Roboto', sans-serif
   font-weight: 100
-  font-size: 1em
+  font-size: 18px
   *
     margin: 0
     padding: 0
 
 h1
-  font-size: 3em
-  font-weight: 3em
-  font-weight: 100
+  font-size: 1rem
+  font-weight: 600
+  color: $color_darkgrey
 
 h2
   font-size: 1.5em
   font-weight: 100
 
+.pagination
+  position: absolute
+  z-index: 99
+  top: 100px
+  left: 50px
+  list-style: none
+  font-weight: 400
+  li
+    transform: rotate(-90deg)
+    margin-bottom: 10px
+    cursor: pointer
+    font-size: 0.7em
+    color: #B8B8B8
+    &:hover
+      color: $color_darkgrey
+      font-weight: 600
+
+.btn
+  display: block
+  padding: 20px 24px
+  border-radius: 12px
+  border: 1px transparent solid
+  cursor: pointer
+  transition: 200ms
+  &__red
+    background-color: $color_main
+    color: #ffffff
+    &:hover
+      background-color: transparent
+      color: $color_main
+      border: 1px $color_main solid
+  &__transperent
+    border: 1px $color_main solid
+    color: $color_main
+    i
+      margin-left: 8px
+    &:hover
+      color: #ffffff
+      background-color: $color_main
+
+.leed-form
+  input
+    background-color: transparent
+    border: 1px #fff solid
+    border-radius: 10px
+    width: 50%
+    margin: 10px auto
+    padding: 10px
+    box-sizing: border-box
+    color: #ffffff
+    &::placeholder
+      color: #ffffff
+    &:last-child
+      color: $color_main
+      background-color: #ffffff
+      cursor: pointer
+      margin-top: 25px
+
 .wrap
   max-width: 1100px
   height: 100%
   margin: 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+header
+  background-color: $color_lightgrey
+  .wrap
+    background-image: url('../img/main_screens.png')
+    background-repeat: no-repeat
+    background-position: 100% 500%
+    background-size: 70vw
+    transition: 700ms
+    &__image
+      background-position: 100% 90%
+    .top-header
+      padding-top: 40px
+      height: 50px
+      flex-shrink: 1
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .logo
+        img
+          width: 220px
+          height: 70px
+    .body-header
+      display: flex
+      flex-direction: column
+      height: 100%
+      padding-top: 140px
+      color: $color_grey
+      p
+        font-size: 1.3em
+        margin-top: 8px
+      .btn
+        margin-top: 40px
+        align-self: flex-start
+  .menu
+    position: absolute
+    top: 40px
+    right: 40px
+    z-index: 10
+  .hidden-menu
+    width: 400px
+    height: 100vh
+    position: fixed
+    right: -400px
+    top: 0
+    background-color: rgba(255, 255, 255, 0.9)
+    transition: 300ms
+    display: flex
+    flex-direction: column
+    z-index: 9
+    &__open
+      right: 0
+    &__items
+      display: flex
+      flex-direction: column
+      padding: 170px 10px 10px 90px
+      height: 100%
+      a
+        margin-top: 15px
+        font-size: 1rem
+        font-weight: 600
+        color: $color_darkgrey
+        text-decoration: none
+        &:hover
+          color: $color_main
+    &__socials
+      display: flex
+      justify-content: center
+      flex-shrink: 0
+      margin-bottom: 100px
+      a
+        margin: 0 8px
+
+  .fill-red
+    position: fixed
+    width: 100vw
+    height: 100vh
+    background-color: rgba(237, 9, 10, 0.8)
+    display: none
+    .popup
+      position: fixed
+      margin: 10vh 20vw
+      width: 60vw
+      height: 80vh
+      background-image: url('../img/popup_bg.svg')
+      background-image: url('../img/popup_bg.svg'), linear-gradient(to bottom, #ed090a 0%,#ae1a1a 100%)
+      background-position: bottom right
+      background-repeat: no-repeat
+      color: #ffffff
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-radius: 10px
+      &__close
+        width: 30px
+        height: 30px
+        position: absolute
+        top: 30px
+        right: 30px
+        cursor: pointer
+        background: url('../img/btn_close.svg') center center no-repeat
+      p
+        margin-top: 8px
+      h1
+        color: #ffffff
+      form
+        margin-top: 50px
+        width: 100%
+        display: flex
+        flex-direction: column
+
+.about
+  .pagination
+    li:nth-child(1)
+      color: $color_main
+      font-weight: 600
+      cursor: default
+  &__bg
+    display: block
+    width: 100%
+    font-size: 400px
+    font-weight: 800
+    color: #F6F6F6
+    position: absolute
+    top: 0
+    left: -110px
+    z-index: 1
+    text-transform: uppercase
+  .wrap
+    justify-content: center
+    &__absolute
+      position: absolute
+      z-index: 2
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      .text_block
+        padding-right: 120px
+        h1
+          margin-bottom: 40px
+        p
+          letter-spacing: 1.8px
+        .about_images
+          margin: 30px 0
+          img
+            margin-right: 120px
+      .image_block
+        display: flex
+        align-items: center
+        img
+          height: 78vh
+
+.portfolio
+  &__row
+    height: 33.3vh
+    +row-flex()
+    .portfolio__col
+      +col()
+      +size(4)
+      +size-md(4)
+      +size-xs(12)
+      background-size: cover
+      background-repeat: no-repeat
+      display: flex
+      align-items: flex-end
+      cursor: pointer
+      &__overlay
+        color: #ffffff
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 20px 25px 50px 25px
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        transition: 200ms
+        h1
+          font-size: 1.2em
+          color: #ffffff
+          text-transform: uppercase
+          line-height: 1.4em
+        p
+          display: none
+          margin-top: 10px
+          font-size: 0.7em
+          letter-spacing: 0.15em
+    .active
+      .portfolio__col__overlay
+        background-color: rgba(223, 13, 13, 0.75)
+        p
+          display: block
+    .col-1
+      background-image: url('../img/portfolio/img_1.png')
+    .col-2
+      background-image: url('../img/portfolio/img_2.png')
+    .col-3
+      background-image: url('../img/portfolio/img_3.png')
+    .col-4
+      background-image: url('../img/portfolio/img_4.png')
+    .col-5
+      background-image: url('../img/portfolio/img_5.png')
+    .col-6
+      background-image: url('../img/portfolio/img_6.png')
+    .col-7
+      background-image: url('../img/portfolio/img_7.png')
+    .col-8
+      background-image: url('../img/portfolio/img_8.png')
+    .col-9
+      background-image: url('../img/portfolio/img_9.png')
+
+.partners
+  .pagination
+    li:nth-child(3)
+      color: $color_main
+      font-weight: 600
+      cursor: default
+  .wrap
+    margin-top: 100px
+    box-sizing: border-box
+    justify-content: center
+    .experience
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      .number
+        img
+          width: 180px
+      .text
+        margin-left: 20px
+        font-size: 1.4em
+        p
+          color: $color_darkgrey
+          &:first-child
+            color: $color_main
+            font-weight: 400
+    .partners-list
+      +row-flex()
+      margin-top: 50px
+      &__item
+        +col()
+        +size(3)
+        +size-md(4)
+        +size-xs(6)
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          width: 180px
+          cursor: pointer
+    .additional
+      display: none
+      margin-top: 0
+      padding-bottom: 50px
+    .btn
+      margin-top: 20px
+      align-self: center
+      padding: 15px 20px
+      font-size: 0.8em
+
+.bigfooter
+  .leed-block
+    height: 75vh
+    background: #ed090a
+    background: linear-gradient(to right, #ed090a 0%,#ae1a1a 100%)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: #ffffff
+    h1
+      color: #ffffff
+    p
+      margin-top: 20px
+    .leed-form
+      display: flex
+      flex-direction: row
+      input
+        padding: 10px 20px
+        margin: 40px 10px 0
+        width: auto
+        max-width: 500px
+        &:last-child
+          padding: 10px 20px
+
+  .footer
+    .btn-up
+      position: absolute
+      margin-top: -20vh
+      cursor: pointer
+    height: 20vh
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 70px
+    img
+      height: 60px
+    .pages
+      display: flex
+      list-style: none
+      li
+        margin: 0 15px
+        a
+          cursor: pointer
+          color: #ccc
+          font-size: 0.8em
+          text-decoration: none
+          font-weight: 400
+          &:hover
+            color: $color_main
+    .socials
+      a
+        img
+          width: 32px
+          margin: 0 5px
+    .copyright
+      color: $color_main
+      font-size: 0.65em
+      font-weight: 400

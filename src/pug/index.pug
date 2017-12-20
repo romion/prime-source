@@ -4,14 +4,185 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name='theme-color', content='#ffffff')
     link(rel="stylesheet", href="css/main.css")
-    title Live Demos
+    link(rel='apple-touch-icon', sizes='180x180', href='./img/favicons/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='./img/favicons/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='./img/favicons/favicon-16x16.png')
+    link(rel='manifest', href='./img/favicons/manifest.json')
+    link(rel='mask-icon', href='./img/favicons/safari-pinned-tab.svg', color='#5bbad5')
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700", rel="stylesheet")
+
+    title Prime Source
   body
-    header
-      h1 Hello
-      //img(src="./img/img1.jpg", alt="An Image", id="img1")
+    .preloader
+      ul.loader
+        li.center
+        -for (var x = 1; x < 9; x++)
+          li(class="item item-" + x)
+    #fullpage
+      header.section
+        .fill-red
+          .popup
+            .popup__close
+            h1 Отправьте свои данные
+            p мы с вами свяжемся !
+            include include/_leed_form
+
+        .menu#nav-icon3
+          span
+          span
+          span
+          span
+        .hidden-menu
+          .hidden-menu__items
+            a(href="#") Главная
+            a(href="#") Вакансии
+            a(href="#") Контакты
+          .hidden-menu__socials
+            include include/_socials
+        .wrap
+          .top-header
+            .logo
+              img(src="./img/logo.svg", alt="Logo")
+          .body-header
+            h1 ИННОВАЦИОННЫЕ  ИТ-РЕШЕНИЯ
+            p Используйте всю мощь компании Prime Source
+            button.btn.btn__red Стать партнером
+      .section.about
+        include include/_pagination
+        .about__bg
+          | about
+        .wrap
+          .wrap__absolute
+            .text_block
+              h1 Prime Source
+              p ИТ команда, успешно закрепившая за собой звание лидера стран СНГ в области автоматизации процессов и внедрения программного обеспечения.
+              .about_images
+                img(src="./img/about_icon_1.svg", alt="About image")
+                img(src="./img/about_icon_2.svg", alt="About image")
+                img(src="./img/about_icon_3.svg", alt="About image")
+              p Наш центр разработки программного обеспечения объединяет различные направления работы в сфере создания программных и интеграционных решений, сочетая множество технологий разработки: построение комплексных решений для финансовых организаций, создание и поддержка базового и критически важного заказного ПО, проектирование и тестирование продуктов, а также технологический и бизнес консалтинг.
+            .image_block
+              img(src="./img/about_logo_big.svg", alt="About image")
+      .section.portfolio
+        .portfolio__row
+          .portfolio__col.col-1
+            .portfolio__col__overlay
+              h1 AML / ANTIFRAUD
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-2
+            .portfolio__col__overlay
+              h1 CRM / BPM / ESB
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-3
+            .portfolio__col__overlay
+              h1 DWH / ERP
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+        .portfolio__row
+          .portfolio__col.col-4
+            .portfolio__col__overlay
+              h1 BIG DATA
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-5
+            .portfolio__col__overlay
+              h1 ДОКУМЕНТАРНЫЕ ОПЕРАЦИИ
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-6
+            .portfolio__col__overlay
+              h1 ИНТЕРНЕТ / МОБИЛЬНЫЙ БАНКИНГ
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+        .portfolio__row
+          .portfolio__col.col-7
+            .portfolio__col__overlay
+              h1 УПРАВЛЕНИЕ РИСКАМИ КРЕДИТНЫЙ СКОРИНГ
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-8
+            .portfolio__col__overlay
+              h1 МОНИТОРИНГ И ВИДЕОНАБЛЮДЕНИЕ
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+          .portfolio__col.col-9
+            .portfolio__col__overlay
+              h1 АУТСТАФФИНГ И АУТСОРСИНГ
+              p Система для управления внутрихозяйственной деятельностью
+              p Направление: ERP-системы
+
+      .section.partners
+        include include/_pagination
+        .wrap
+          .experience
+            .number
+              img(src="./img/number.svg", alt="Sberbank")
+            .text
+              p Лет на рынке
+              p сотни историй успеха
+          .partners-list
+            .partners-list__item
+              img(src="./img/partners/sberbank.svg", alt="Sberbank")
+            .partners-list__item
+              img(src="./img/partners/vtb.svg", alt="VTB")
+            .partners-list__item
+              img(src="./img/partners/credit.svg", alt="Home Credit Bank")
+            .partners-list__item
+              img(src="./img/partners/alfa.svg", alt="Alfa Bank")
+            .partners-list__item
+              img(src="./img/partners/halyk.svg", alt="Halyk Bank")
+            .partners-list__item
+              img(src="./img/partners/cocacola.svg", alt="CocaCola")
+            .partners-list__item
+              img(src="./img/partners/kaztrans.svg", alt="KazTransGaz")
+            .partners-list__item
+              img(src="./img/partners/bta.svg", alt="BTA")
+          button.btn.btn-more.btn__transperent Смотреть еще
+            i.fa.fa-caret-down
+
+          .partners-list.additional
+            .partners-list__item
+              img(src="./img/partners/sberbank.svg", alt="Sberbank")
+            .partners-list__item
+              img(src="./img/partners/vtb.svg", alt="VTB")
+            .partners-list__item
+              img(src="./img/partners/credit.svg", alt="Home Credit Bank")
+            .partners-list__item
+              img(src="./img/partners/alfa.svg", alt="Alfa Bank")
+            .partners-list__item
+              img(src="./img/partners/halyk.svg", alt="Halyk Bank")
+            .partners-list__item
+              img(src="./img/partners/cocacola.svg", alt="CocaCola")
+            .partners-list__item
+              img(src="./img/partners/kaztrans.svg", alt="KazTransGaz")
+            .partners-list__item
+              img(src="./img/partners/bta.svg", alt="BTA")
+
+      .section.bigfooter
+        .leed-block
+          h1 Планируете большой проект ?
+          p оставьте свои данные и мы с вами свяжемся !
+          include include/_leed_form
+        .footer
+          .btn-up
+            img(src="./img/btn_up.svg", alt="Logo")
+          img(src="./img/logo.svg", alt="Logo")
+          ul.pages
+            li
+              a(href="#") Контакты
+            li
+              a(href="#") Вакансии
+          .socials
+            include include/_socials
+          .copyright 2018 © PRIME SOURCE
 
     script(src="./js/jquery-3.2.1.js")
+    script(src="./js/jquery.easings.js")
+    script(src="./js/scrolloverflow.js")
+    script(src="./js/jquery.fullpage.js")
     script(src="./js/jquery.validate.min.js")
-    script(src="./js/jquery.sweet-modal.min.js")
     script(src="./js/main.js")

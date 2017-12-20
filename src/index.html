@@ -4,17 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.css">
-    <title>Live Demos</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicons/manifest.json">
+    <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <title>Prime Source</title>
   </head>
   <body>
-    <header>
-      <h1>Hello</h1>
-      <!--img(src="./img/img1.jpg", alt="An Image", id="img1")-->
-    </header>
+    <div class="preloader">
+      <ul class="loader">
+        <li class="center"></li>
+        <li class="item item-1"></li>
+        <li class="item item-2"></li>
+        <li class="item item-3"></li>
+        <li class="item item-4"></li>
+        <li class="item item-5"></li>
+        <li class="item item-6"></li>
+        <li class="item item-7"></li>
+        <li class="item item-8"></li>
+      </ul>
+    </div>
+    <div id="fullpage">
+      <header class="section">
+        <div class="fill-red">
+          <div class="popup">
+            <div class="popup__close"></div>
+            <h1>Отправьте свои данные</h1>
+            <p>мы с вами свяжемся !</p>
+            <form class="leed-form">
+              <input type="text" name="tel" placeholder="Number" value="">
+              <input type="email" name="email" placeholder="E-Mail" value="">
+              <input type="submit" value="Отправить">
+            </form>
+          </div>
+        </div>
+        <div class="menu" id="nav-icon3"><span></span><span></span><span></span><span></span></div>
+        <div class="hidden-menu">
+          <div class="hidden-menu__items"><a href="#">Главная</a><a href="#">Вакансии</a><a href="#">Контакты</a></div>
+          <div class="hidden-menu__socials"><a href="#"><img src="./img/socials/facebook.svg" alt="Facebook"></a><a href="#"><img src="./img/socials/instagram.svg" alt="Instagram"></a><a href="#"><img src="./img/socials/linkedin.svg" alt="Linkedin"></a><a href="#"><img src="./img/socials/vk.svg" alt="VK"></a></div>
+        </div>
+        <div class="wrap">
+          <div class="top-header">
+            <div class="logo"><img src="./img/logo.svg" alt="Logo"></div>
+          </div>
+          <div class="body-header">
+            <h1>ИННОВАЦИОННЫЕ  ИТ-РЕШЕНИЯ</h1>
+            <p>Используйте всю мощь компании Prime Source</p>
+            <button class="btn btn__red">Стать партнером</button>
+          </div>
+        </div>
+      </header>
+      <div class="section about">
+        <ul class="pagination">
+          <li class="to-1">01</li>
+          <li class="to-2">02</li>
+          <li class="to-3">03</li>
+          <li class="to-4">04</li>
+        </ul>
+        <div class="about__bg">about</div>
+        <div class="wrap">
+          <div class="wrap__absolute">
+            <div class="text_block">
+              <h1>Prime Source</h1>
+              <p>ИТ команда, успешно закрепившая за собой звание лидера стран СНГ в области автоматизации процессов и внедрения программного обеспечения.</p>
+              <div class="about_images"><img src="./img/about_icon_1.svg" alt="About image"><img src="./img/about_icon_2.svg" alt="About image"><img src="./img/about_icon_3.svg" alt="About image"></div>
+              <p>Наш центр разработки программного обеспечения объединяет различные направления работы в сфере создания программных и интеграционных решений, сочетая множество технологий разработки: построение комплексных решений для финансовых организаций, создание и поддержка базового и критически важного заказного ПО, проектирование и тестирование продуктов, а также технологический и бизнес консалтинг.</p>
+            </div>
+            <div class="image_block"><img src="./img/about_logo_big.svg" alt="About image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section portfolio">
+        <div class="portfolio__row">
+          <div class="portfolio__col col-1">
+            <div class="portfolio__col__overlay">
+              <h1>AML / ANTIFRAUD</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-2">
+            <div class="portfolio__col__overlay">
+              <h1>CRM / BPM / ESB</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-3">
+            <div class="portfolio__col__overlay">
+              <h1>DWH / ERP</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__row">
+          <div class="portfolio__col col-4">
+            <div class="portfolio__col__overlay">
+              <h1>BIG DATA</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-5">
+            <div class="portfolio__col__overlay">
+              <h1>ДОКУМЕНТАРНЫЕ ОПЕРАЦИИ</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-6">
+            <div class="portfolio__col__overlay">
+              <h1>ИНТЕРНЕТ / МОБИЛЬНЫЙ БАНКИНГ</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__row">
+          <div class="portfolio__col col-7">
+            <div class="portfolio__col__overlay">
+              <h1>УПРАВЛЕНИЕ РИСКАМИ КРЕДИТНЫЙ СКОРИНГ</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-8">
+            <div class="portfolio__col__overlay">
+              <h1>МОНИТОРИНГ И ВИДЕОНАБЛЮДЕНИЕ</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+          <div class="portfolio__col col-9">
+            <div class="portfolio__col__overlay">
+              <h1>АУТСТАФФИНГ И АУТСОРСИНГ</h1>
+              <p>Система для управления внутрихозяйственной деятельностью</p>
+              <p>Направление: ERP-системы</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section partners">
+        <ul class="pagination">
+          <li class="to-1">01</li>
+          <li class="to-2">02</li>
+          <li class="to-3">03</li>
+          <li class="to-4">04</li>
+        </ul>
+        <div class="wrap">
+          <div class="experience">
+            <div class="number"><img src="./img/number.svg" alt="Sberbank"></div>
+            <div class="text">
+              <p>Лет на рынке</p>
+              <p>сотни историй успеха</p>
+            </div>
+          </div>
+          <div class="partners-list">
+            <div class="partners-list__item"><img src="./img/partners/sberbank.svg" alt="Sberbank"></div>
+            <div class="partners-list__item"><img src="./img/partners/vtb.svg" alt="VTB"></div>
+            <div class="partners-list__item"><img src="./img/partners/credit.svg" alt="Home Credit Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/alfa.svg" alt="Alfa Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/halyk.svg" alt="Halyk Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/cocacola.svg" alt="CocaCola"></div>
+            <div class="partners-list__item"><img src="./img/partners/kaztrans.svg" alt="KazTransGaz"></div>
+            <div class="partners-list__item"><img src="./img/partners/bta.svg" alt="BTA"></div>
+          </div>
+          <button class="btn btn-more btn__transperent">Смотреть еще<i class="fa fa-caret-down"></i></button>
+          <div class="partners-list additional">
+            <div class="partners-list__item"><img src="./img/partners/sberbank.svg" alt="Sberbank"></div>
+            <div class="partners-list__item"><img src="./img/partners/vtb.svg" alt="VTB"></div>
+            <div class="partners-list__item"><img src="./img/partners/credit.svg" alt="Home Credit Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/alfa.svg" alt="Alfa Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/halyk.svg" alt="Halyk Bank"></div>
+            <div class="partners-list__item"><img src="./img/partners/cocacola.svg" alt="CocaCola"></div>
+            <div class="partners-list__item"><img src="./img/partners/kaztrans.svg" alt="KazTransGaz"></div>
+            <div class="partners-list__item"><img src="./img/partners/bta.svg" alt="BTA"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section bigfooter">
+        <div class="leed-block">
+          <h1>Планируете большой проект ?</h1>
+          <p>оставьте свои данные и мы с вами свяжемся !</p>
+          <form class="leed-form">
+            <input type="text" name="tel" placeholder="Number" value="">
+            <input type="email" name="email" placeholder="E-Mail" value="">
+            <input type="submit" value="Отправить">
+          </form>
+        </div>
+        <div class="footer">
+          <div class="btn-up"><img src="./img/btn_up.svg" alt="Logo"></div><img src="./img/logo.svg" alt="Logo">
+          <ul class="pages">
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+          <div class="socials"><a href="#"><img src="./img/socials/facebook.svg" alt="Facebook"></a><a href="#"><img src="./img/socials/instagram.svg" alt="Instagram"></a><a href="#"><img src="./img/socials/linkedin.svg" alt="Linkedin"></a><a href="#"><img src="./img/socials/vk.svg" alt="VK"></a></div>
+          <div class="copyright">2018 © PRIME SOURCE</div>
+        </div>
+      </div>
+    </div>
     <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/jquery.easings.js"></script>
+    <script src="./js/scrolloverflow.js"></script>
+    <script src="./js/jquery.fullpage.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
-    <script src="./js/jquery.sweet-modal.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
