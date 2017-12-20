@@ -1,6 +1,6 @@
-# Jade/Pug, Sass Compile With Live Server
+# Prime Source It Solution
 
-My personal starter
+landing page
 
 ## Features
 * Jade & Pug -> HTML
@@ -10,5 +10,6 @@ My personal starter
 * css map
 * minify HTML, CSS & optimize JS
 * normalize css
-* FontAwesome, OpenSans
-* Jquery, sweetmodal, validate
+* Roboto, OpenSans
+* FullPage.js
+* Jquery, validate
